@@ -1,5 +1,7 @@
 `mason-formatter` bridges `mason.nvim` with the `formatter.nvim` plugin - making it easier to use both plugins together.
 
+> 🚧 not ready for use, under dev
+
 # Requirements
 
 -   neovim `>= 0.7.0`
