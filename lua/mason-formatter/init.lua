@@ -25,9 +25,6 @@ M.setup = function(config)
 	end
 
 	require("mason-formatter.api.command")
-	require("formatter").setup({
-		filetype = settings.current.filetype_mappings,
-	})
 end
 
 ---@param handlers table<string, fun(source_name: string)>
