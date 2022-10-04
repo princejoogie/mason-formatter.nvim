@@ -1,10 +1,9 @@
 local util = require("formatter.util")
 
 local M = {}
-
 -- table of formatters where key is the name of the mason package
 -- and value is the args for formatter.nvim
-local formatters = {
+M.formatters = {
 	prettier = {
 		exe = "prettier",
 		args = { "--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)) },
@@ -54,21 +53,21 @@ local formatters = {
 }
 
 local DEFAULT_FILETYPE_MAPPINGS = {
-	javascript = formatters.prettier,
-	javascriptreact = formatters.prettier,
-	typescript = formatters.prettier,
-	typescriptreact = formatters.prettier,
-	markdown = formatters.prettier,
-	html = formatters.prettier,
-	css = formatters.prettier,
-	json = formatters.prettier,
-	yaml = formatters.prettier,
-	cpp = formatters["clang-format"],
-	lua = formatters.stylua,
-	python = formatters.autopep8,
-	prisma = formatters["prisma-fmt"],
-	rust = formatters.rustfmt,
-	go = formatters.gofmt,
+	javascript = M.formatters.prettier,
+	javascriptreact = M.formatters.prettier,
+	typescript = M.formatters.prettier,
+	typescriptreact = M.formatters.prettier,
+	markdown = M.formatters.prettier,
+	html = M.formatters.prettier,
+	css = M.formatters.prettier,
+	json = M.formatters.prettier,
+	yaml = M.formatters.prettier,
+	cpp = M.formatters["clang-format"],
+	lua = M.formatters.stylua,
+	python = M.formatters.autopep8,
+	prisma = M.formatters["prisma-fmt"],
+	rust = M.formatters.rustfmt,
+	go = M.formatters.gofmt,
 }
 
 M._DEFAULT_FILETYPE_MAPPINGS = DEFAULT_FILETYPE_MAPPINGS

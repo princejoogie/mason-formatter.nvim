@@ -1,4 +1,4 @@
-local mappings = require("mason-formatter.mappings.filetype")
+local mappings = require("mason-formatter.mappings")
 
 local M = {}
 
